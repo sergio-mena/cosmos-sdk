@@ -540,6 +540,7 @@ var sizeTests = []struct {
 	{"100000", 6},
 	{"99999", 5},
 	{"10000000000", 11},
+	{"9000000000000000000", 19},
 	{"9999999999999999999", 19},
 	{"18446744073709551616", 20},
 	{"18446744073709551618", 20},
@@ -572,7 +573,7 @@ var sizeTests = []struct {
 func TestNewIntFromString(t *testing.T) {
 	for _, st := range sizeTests {
 		ii, _ := math.NewIntFromString(st.s)
-		require.Equal(t, st.want, ii.Size())
+		require.Equal(t, st.want, ii.Size(), "size mismatch for %q", st.s)
 	}
 }
 
