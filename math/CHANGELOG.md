@@ -38,7 +38,7 @@ Ref: https://github.com/commitizen/conventional-commit-types/blob/v3.0.0/index.j
 
 ### Bug Fixes
 
-*
+* [#17485](https://github.com/cosmos/cosmos-sdk/pull/17485) Fix `.Size()` of `9999999999999999999` to be `19` instead of `20`.
 
 ## [math/v1.1.1](https://github.com/cosmos/cosmos-sdk/releases/tag/math/v1.1.1) - 2023-08-21
 
